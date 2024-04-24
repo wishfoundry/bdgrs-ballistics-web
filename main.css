@@ -1,0 +1,231 @@
+body {
+
+    /* background: linear-gradient(to bottom, #B721FF, #2AF598, #fec051, #FEE140, #FA709A ); */
+    background: linear-gradient(to bottom right, #FEE140, #FA709A);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.7);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background: linear-gradient(to bottom right, #FEE140, #FA709A); */
+}
+
+#links {
+    width: 400px;
+    text-align: left;
+    font-size: x-large;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+#links a {
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+    margin: 10px;
+    border: white 1px solid;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#links a:hover {
+    background-color: #1f1f1f;
+    cursor: pointer;
+}
+
+#header {
+    max-width: 1200px;
+}
+
+#chart {
+    flex-grow: 1;
+}
+
+#chart-toolbar {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#chart svg {
+    max-height: calc(100vh - 49px);
+}
+
+fieldset > div {
+    display: flex;
+    flex-direction: row;
+}
+
+fieldset > div > label {
+    width: 135px;
+}
+
+fieldset > div > select {
+    width: 148px;
+}
+fieldset > div > input {
+    width: 140px;
+}
+
+fieldset .input-pair input {
+    width: 90px;
+}
+fieldset .input-pair select {
+    width: 50px;
+}
+
+
+.app-bar {
+    flex-shrink: 0;
+    height: 48px;
+    padding-left: 16px;
+    padding-right: 4px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    position: relative;
+}
+
+.config-button {
+    border-radius: 0;
+    height: 100%;
+    visibility: hidden;
+    transition-delay: 0ms;
+}
+
+fieldset {
+    border-radius: 6px;
+    /* border-color: hsla(0, 0%, 100%, .4); */
+    border-image: linear-gradient(#B721FF, #FEE140) 30;
+    border-width: 1px;
+    border-style: solid;
+}
+
+input, select {
+    margin: 1px;
+    background-color: hsla(0, 0%, 100%, .15);
+    border-style: solid;
+    border-width: 1px;
+    border-color: hsla(0, 0%, 100%, .4);
+    border-radius: 3px;
+    /* border-image: linear-gradient(#B721FF, #FEE140) 30; */
+}
+#form-panel {
+    align-self: start;
+}
+
+.panel {
+    align-self: stretch;
+}
+
+.panel fieldset {
+    margin-right: 10px;
+}
+
+.panel-header {
+    display: flex; 
+    flex-direction: row; height: 48px;
+    padding-left: 16px;
+    padding-right: 12px;
+    align-items: center;
+    border-bottom: 1px solid rgba(238, 238, 238, 0.4);
+    /* border-bottom: 1px solid rgba(0, 0, 0, .12); */
+    justify-content: space-between;
+
+    background-color: hsla(0, 0%, 100%, .12);
+    
+    -webkit-backdrop-filter: saturate(110%) blur(5px);
+    backdrop-filter: saturate(110%) blur(5px);
+}
+
+#bullet-panel {
+    width: 160px; 
+
+    border-left: 1px solid hsla(0, 0%, 100%, .4);
+    transition: width 0.3s ease-in-out;
+}
+#bullet-panel.closed {
+    width: 0; 
+}
+
+
+#ballistics-panel .panel-header {
+    transition: all 0.3s ease-in-out;
+    flex-direction: row;
+}
+
+.panel-header header {
+    text-transform: uppercase;
+}
+
+.panel-header__button {
+    transition: all 0.3s ease-in-out;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.panel-header__button:hover {
+    opacity: 1;
+}
+
+#ballistics-panel .panel-header__button.open {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.all-bullet-btn-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    
+}
+
+.bullet-btn-container {
+    text-align: center;
+}
+
+.bullet-btn-container:hover {
+    background: hsla(0, 0%, 100%, .15);
+    cursor: pointer;
+}
+
+.btn {
+    line-height: 2.5em;
+    cursor: pointer;
+}
+
+.btn.selected {
+    border-left: solid 10px hsla(0, 0%, 100%, .15);
+}
+
+.bullet-btn {
+    height: 40px;
+    border: 1px solid hsla(0, 0%, 100%, .12);
+}
+
+.icon {
+    display: inline-flex;
+    align-self: center;
+}
+
+.icon svg, .icon img {
+    height: 1em;
+    width: 1em;
+    fill: currentColor;
+}
+
+.icon.baseline svg, .icon img {
+    top: .125em;
+    position: relative;
+}
